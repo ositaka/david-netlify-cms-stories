@@ -30,7 +30,8 @@ collections:
           {label: Images, name: images, widget: list, fields: [
             {label: Image, name: image, widget: image}, 
             {label: Title, name: title, widget: string}, 
-            {label: Model, name: model, widget: string}
+            {label: Model, name: model, widget: string},
+          ]}
         ]}
 
   - name: "pages"
