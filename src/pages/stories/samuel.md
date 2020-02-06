@@ -8,4 +8,12 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - brewing
   - chemex
+gallery:
+  images:
+    - image: /img/blog-index.jpg
+      model: Another Model
+      title: Second image
+    - image: /img/chemex.jpg
+      model: Nuno Marques
+      title: First image edited
 ---

@@ -64,9 +64,17 @@ BlogPostTemplate.propTypes = {
 	description: PropTypes.string,
 	title: PropTypes.string,
 	helmet: PropTypes.object,
-	gallery: PropTypes.shape({
-		images: PropTypes.array
-	})
+	// gallery: PropTypes.shape({
+	// 	images: PropTypes.array
+	// })
+
+	gallery: PropTypes.arrayOf(
+		PropTypes.shape({
+			image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+			title: PropTypes.string,
+			model: PropTypes.string
+		})
+	)
 }
 
 const BlogPost = ({ data }) => {
@@ -99,7 +107,9 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
 	data: PropTypes.shape({
-		markdownRemark: PropTypes.object
+		markdownRemark: PropTypes.shape({
+			frontmatter: PropTypes.object
+		})
 	})
 }
 
