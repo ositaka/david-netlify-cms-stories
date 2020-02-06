@@ -26,10 +26,12 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: Gallery, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image}, 
-          {label: Title, name: title, widget: string}, 
-          {label: Model, name: model, widget: string}, 
+      - {label: Story Gallery, name: gallery, widget: object, fields: [
+          {label: Images, name: images, widget: list, fields: [
+            {label: Image, name: image, widget: image}, 
+            {label: Title, name: title, widget: string}, 
+            {label: Model, name: model, widget: string},
+          ]}
         ]}
 
   - name: "pages"
